@@ -5,7 +5,7 @@ import { getAllPosts } from "../../lib/posts-util";
 
 export default function AllPostsPage(props) {
     return (
-        <AllPosts posts={props.allPosts} />
+        <AllPosts posts={props.posts} />
     )
 }
 
