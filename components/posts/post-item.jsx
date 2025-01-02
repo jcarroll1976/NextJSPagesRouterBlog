@@ -20,7 +20,7 @@ export default function PostItem(props) {
         <li className={classes.post}>
             <Link href={linkPath}>
                 <div className={classes.image}>
-                    <Image src={imagePath} alt={title} width={300} height={200} layout="responsive" />
+                    <Image src={imagePath} alt={title} width={300} height={200} style={{width:'100%',height:'auto'}}/>
                 </div>
                 <div className={classes.content}>
                     <h3>TITLE</h3>
