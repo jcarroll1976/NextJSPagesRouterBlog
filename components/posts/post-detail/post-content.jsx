@@ -1,18 +1,15 @@
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 
 import PostHeader from './post-header';
 import classes from './post-content.module.css';
 import Image from 'next/image';
 
-const DUMMY_POST = {
-    slug: 'getting-started-with-nextjs',
-    title: 'Getting Started with NextJS',
-    image: 'getting-started-nextjs.png',
-    date: '2022-02-10',
-    content: '# This is a first post\n\nAnd this is the first post content!'
-};
+SyntaxHighlighter.registerLanguage('js', js);
+SyntaxHighlighter.registerLanguage('css', css);
 
 export default function PostContent(props) {
     const { post } = props;

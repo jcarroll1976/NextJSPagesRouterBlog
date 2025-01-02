@@ -18,9 +18,10 @@
     // Store it in a database
     let client;
 
+    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.csr7u.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority&appName=Cluster0`;
     try {
-    client = await MongoClient.connect('mongodb+srv://josh:iJwXolbN5EKTVagD@cluster0.csr7u.mongodb.net/my-site?retryWrites=true&w=majority&appName=Cluster0')
-} catch (error) {
+    client = await MongoClient.connect(connectionString);
+    } catch (error) {
     res.status(500).json({ message: 'Could not connect to database' });
     return;
     }

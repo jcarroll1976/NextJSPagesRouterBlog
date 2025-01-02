@@ -11,8 +11,8 @@ export default function AllPostsPage(props) {
         <Head>
             <title>All Posts</title>
             <meta name="description" content="A list of all programming-related posts!"/>
-            <AllPosts posts={props.posts} />
         </Head>
+        <AllPosts posts={props.posts} />
         </>
         
     )
